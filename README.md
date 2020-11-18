@@ -1,11 +1,12 @@
-# BasicTech
+# Basic Tech
 
 This depository aims at collecting and explaining some basic technologies related to computer science, including but not limited to the introduction of classical algorithms, the recommendation of utility tools, the notes of common scripts, etc.
 
 ## Catalogs
 
-* **DIP(Digital Image Processing)**
+* **DIP (Digital Image Processing)**
 * **Basic Processing of Image and Video**
+* **Common Command Line and Script in Linux**
 
 ## Declaration
 
