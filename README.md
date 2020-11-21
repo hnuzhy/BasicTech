@@ -4,10 +4,10 @@ This depository aims at collecting and explaining some basic technologies relate
 
 ## Catalogs
 
-* **DIP (Digital Image Processing)**
-* **Basic Processing Methods of Image and Video**
-* **Common Command Line and Script in Linux**
-* **The Situation of Mainstream High and New Tech**
+* **DIP (Digital Image Processing)** [[DIP]](./DIP)
+* **Basic Processing Methods of Image and Video** [[ImageVideoTools]](./ImageVideoTools)
+* **Common Command Line and Script in Linux** [[LinuxScripts]](./LinuxScripts)
+* **The Situation of Mainstream High and New Tech** [[HighNewTech]](./HighNewTech)
 
 ## Declaration
 
