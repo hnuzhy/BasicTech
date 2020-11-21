@@ -1,6 +1,7 @@
 # The Situation of Mainstream High and New Tech
 
 ## 芯片制造
+
 * 摩尔定律：当价格不变时，集成电路上可容纳的元器件的数目，约每隔18-24个月便会增加一倍，性能也将提升一倍。
 * 芯片制造的八大材料：硅片、电子特气、光掩模、光刻胶、光刻胶辅助材料、湿化学品、靶材、抛光
 * 芯片制造的八大设备：扩散、薄膜沉积、光刻、刻蚀、离子注入、CMP抛光、清洗、测试
@@ -12,4 +13,5 @@
   ```
 ![img1](./materials/process_of_nano_chip_manufacturing.jpg)
 * 芯片代工厂国产技术设备发展状况（截止到2020年11月）
+
 ![img2](./materials/chip_foundry_technology_China_202011.jpg)
