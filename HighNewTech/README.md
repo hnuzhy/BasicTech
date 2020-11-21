@@ -8,5 +8,8 @@
   前道工序：扩散、薄膜沉积、光刻、刻蚀、离子注入、CMP、金属化、测试
   后道工序：背面减薄、晶圆切割、贴片、引线键合、模塑、切筋/成型、终测
   ```
-  
-![img1][./materials/process_of_nano_chip_manufacturing.jpg]
+![img1](./materials/process_of_nano_chip_manufacturing.jpg)
+
+* 芯片制造的八大材料：硅片、电子特气、光掩模、光刻胶、光刻胶辅助材料、湿化学品、靶材、抛光
+* 芯片制造的八大设备：扩散、薄膜沉积、光刻、刻蚀、离子注入、CMP抛光、清洗、测试
+* 
