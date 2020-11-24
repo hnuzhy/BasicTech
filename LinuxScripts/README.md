@@ -2,6 +2,7 @@
 
 * 系统相关
 ```
+Ctrl+Alt+F3  # Ubuntu开机过程中操作，进入命令行交互界面
 uname -a  # 查看当前操作系统内核信息
 sudo dmidecode | grep "Product Name"  # 查看机器型号
 sudo dmidecode |grep -A16 "Memory Device$"|grep Size  # 查看机器有几个内存插槽及已使用几个
@@ -11,6 +12,12 @@ sudo dmidecode |grep -A16 "Memory Device$"|grep Size  # 查看机器有几个内
 ```
 dmesg | grep -i eth  # 查看网卡信息
 lspci |egrep -i eth  # 查看有几块网卡
+ifconfig  # 查看网络配置信息
+ifconfig eth0 down/up  # 将网卡网络服务禁用或开启，eth0为网卡名，方法1
+ifdown/ifup eth0  # 将网卡网络服务禁用或开启，eth0为网卡名，方法2
+sudo vi /etc/network/interfaces  # 查看网卡信息，并为网卡配置静态IP地址，需要root用户
+sudo service network restart  # Linux中重新启动网卡网络服务，但Ubuntu下可能不可用
+sudo service network-manager restart  # Ubuntu下重新启动网卡网络服务，使用ifconfig亦可
 ```
 
 * CPU相关操作
