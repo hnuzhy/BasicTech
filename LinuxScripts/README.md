@@ -6,6 +6,8 @@ Ctrl+Alt+F3  # Ubuntu开机过程中操作，进入命令行交互界面
 uname -a  # 查看当前操作系统内核信息
 sudo dmidecode | grep "Product Name"  # 查看机器型号
 sudo dmidecode |grep -A16 "Memory Device$"|grep Size  # 查看机器有几个内存插槽及已使用几个
+sudo adduser username  # 为系统添加新的用户成员username，默认添加后的用户主文件夹在/home/username下
+sudo chown -R username:username /path/to/data/username  # 将某个目录下的访问权限绑定到某个用户
 ```
 
 * 网卡
