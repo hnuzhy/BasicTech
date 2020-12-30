@@ -73,8 +73,9 @@
 
 ## 智能手机相关
 
-Smartphone Shipment Market：
-  *SAMSUNG HUAWEI  XIAOMI  APPLE OPPO  VIVO  REALME  LENOVO-GROUP  LG  TECNO*
+Smartphone Shipment Market：SAMSUNG HUAWEI  XIAOMI  APPLE OPPO  VIVO  REALME  LENOVO-GROUP  LG  TECNO
 
 
 ## 互联网企业与公司
+
+* 2020世界排名前20互联网公司：`微软、亚马逊、谷歌、Facebook、腾讯、阿里巴巴、蚂蚁金服、美团、S/F、PayPal、Netflix、ORACLE、拼多多、京东、今日头条、Uber、Booking、网易、滴滴、百度`
