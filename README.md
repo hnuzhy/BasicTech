@@ -4,12 +4,13 @@ This depository aims at collecting and explaining some basic technologies relate
 
 ## Catalogs
 
+* **Deep Learning Basic Knowledge** [[BasicDL]](./BasicDL)
 * **DIP (Digital Image Processing)** [[DIP]](./DIP)
 * **Facial Action Coding System** [[FACS]](./FACS)
 * **The Situation of Mainstream High and New Tech** [[HighNewTech]](./HighNewTech)
 * **Basic Processing Methods of Image and Video** [[ImageVideoTools]](./ImageVideoTools)
 * **Common Command Line and Script in Linux** [[LinuxScripts]](./LinuxScripts)
-* **Deep Learning Basic Knowledge** [[BasicDL]](./BasicDL)
+
 
 ## Declaration
 
