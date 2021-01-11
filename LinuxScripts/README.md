@@ -54,4 +54,5 @@ cp -r /folder/source /folder/target   # 文件夹使用-r --recursive
 ```
 du -sh *  # 显示文件夹下所有文件大小
 df -h  # 显示机器上整个文件系统的使用情况
+du -B G --max-depth=1  # 以GB为单位显示深度为1的当前各文件夹下的所占存储大小
 ```
