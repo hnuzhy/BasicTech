@@ -50,9 +50,11 @@ tar -xjvf file.tar.bz2  # 解压 tar.bz2
 cp -r /folder/source /folder/target   # 文件夹使用-r --recursive
 ```
 
-* 文件大小
+* 文件大小与个数
 ```
 du -sh *  # 显示文件夹下所有文件大小
 df -h  # 显示机器上整个文件系统的使用情况
 du -B G --max-depth=1  # 以GB为单位显示深度为1的当前各文件夹下的所占存储大小
+ls -l ./your/path/ | grep "-" |  wc -l  # 查看某文件夹下文件的个数(不包含子文件)
+ls -lR ./your/path/ | grep "-" | wc -l  # 查看某文件夹下文件的个数(包含子文件)
 ```
