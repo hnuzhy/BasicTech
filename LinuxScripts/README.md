@@ -22,7 +22,17 @@ sudo service networking restart  # Linux中重新启动网卡网络服务，但U
 sudo service NetworkManager restart  # Ubuntu下重新启动网卡网络服务，使用ifconfig亦可
 ```
 
-* 静态IP地址
+* 修改默认端口号
+```
+sudo vi /etc/ssh/sshd_config /etc/ssh/sshd_config.bak  # 备份一下相关系统配置文件
+sudo vi /etc/ssh/sshd_config  # 修改系统配置文件，选择性注释掉“Port 22”，添加新的端口号“Port 2222”
+iptables -A INPUT -p tcp --dport 2222 -j ACCEPT  # 添加到路由表，将修改内容执行生效
+sudo /etc/init.d/sshd restart  # 重启sshd文件生效
+sudo service ssh restart  # 如果上面的命令行不通，试一下这种方式重启sshd文件生效
+netstat -an | grep "LISTEN "  # 查看端口状态
+```
+
+* 配置静态IP地址
 ```
 sudo vi /etc/network/interfaces  # 只适用于系统版本低于Ubuntu18.04的Linux操作系统
 sudo service NetworkManager restart
@@ -31,12 +41,6 @@ cd /etc/netplan & sudo vi 50-cloud-init.yaml  # 适用于系统版本为Ubuntu18
 sduo netplan apply
 
 netstat -rn  # 查看gateway4等配置是否正确
-sudo vi /etc/ssh/sshd_config /etc/ssh/sshd_config.bak  # 备份一下相关系统配置文件
-sudo vi /etc/ssh/sshd_config  # 修改系统配置文件，选择性注释掉“Port 22”，添加新的端口号“Port 2222”
-iptables -A INPUT -p tcp --dport 2222 -j ACCEPT  # 添加到路由表，将修改内容执行生效
-sudo /etc/init.d/sshd restart  # 重启sshd文件生效
-sudo service ssh restart  # 如果上面的命令行不通，试一下这种方式重启sshd文件生效
-netstat -an | grep "LISTEN "  # 查看端口状态
 telnet 192.168.1.11 2222  # 测试新配置的对应的IP地址和端口号是否可正常的访问
 ```
 
