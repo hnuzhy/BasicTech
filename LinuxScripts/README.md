@@ -58,6 +58,8 @@ cat /proc/meminfo  # 查看内存详细信息
 ```
 nvidia-smi  # 查看GPU占用情况
 watch -n 3 nvidia-smi  # 每隔n秒显示刷新一次GPU详情
+cat /usr/local/cuda/version.txt  # 查看CUDA版本
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2  # 查看cudnn版本
 ```
 
 * 文件解压缩
@@ -70,6 +72,7 @@ tar -xjvf file.tar.bz2  # 解压 tar.bz2
 * 文件复制
 ```
 cp -r /folder/source /folder/target   # 文件夹使用-r --recursive
+scp -r -P 2345 username@202.120.38.77:/folder/source /folder/target  # 远程从某台服务器上拷贝文件，如果该服务器端口不是默认的22，使用-P修改
 ```
 
 * 文件大小与个数
