@@ -72,7 +72,8 @@ tar -xjvf file.tar.bz2  # 解压 tar.bz2
 * 文件复制
 ```
 cp -r /folder/source /folder/target   # 文件夹使用-r --recursive
-scp -r -P 2345 username@202.120.38.77:/folder/source /folder/target  # 远程从某台服务器上拷贝文件，如果该服务器端口不是默认的22，使用-P修改
+scp -r -v -P 2345 username@server_IP:/folder/source /folder/target  # 远程从某台服务器上拷贝文件。-r针对文件夹；-v动态显示信息；如果该服务器端口不是默认的22，使用-P修改
+rsync -avzut -e 'ssh -p 2345' username@hostname:SourceFile DestFile  # 远程同步服务器文件，比scp更强大，不修改文件创建日期，可以不覆盖式传输，支持断点传输。-e后的引号内表示修改端口号，-avzut表示的内容，请自行使用rsync -h查看
 ```
 
 * 文件大小与个数
