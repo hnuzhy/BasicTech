@@ -6,8 +6,12 @@ Ctrl+Alt+F3  # Ubuntu开机过程中操作，进入命令行交互界面
 uname -a  # 查看当前操作系统内核信息
 sudo dmidecode | grep "Product Name"  # 查看机器型号
 sudo dmidecode |grep -A16 "Memory Device$"|grep Size  # 查看机器有几个内存插槽及已使用几个
-sudo adduser username  # 为系统添加新的用户成员username，默认添加后的用户主文件夹在/home下，添加后需要设定密码
+sudo adduser username -m  # 为系统添加新用户，默认添加后的用户主文件夹在/home下，-m可保证一定在/home目录下
+sudo passwd username  # 为系统的新用户设置用户登陆密码，这一步骤紧跟添加新用户之后
+su username  # 切换到某个用户账号下，需要输入该用户密码
+sudo userdel -r username  # 删除某个用户，加上-r可以删除/home/路径下的用户文件夹，否则不能
 sudo chown -R username:username /path/to/data/username  # 将某个目录下的访问权限绑定到某个用户
+grep bash /etc/passwd  # 查看系统下所有存在的用户名（/home目录下不一定真实）
 ```
 
 * 网卡
@@ -72,8 +76,14 @@ tar -xjvf file.tar.bz2  # 解压 tar.bz2
 * 文件复制
 ```
 cp -r /folder/source /folder/target   # 文件夹使用-r --recursive
-scp -r -v -P 2345 username@server_IP:/folder/source /folder/target  # 远程从某台服务器上拷贝文件。-r针对文件夹；-v动态显示信息；如果该服务器端口不是默认的22，使用-P修改
-rsync -avzut -e 'ssh -p 2345' username@hostname:SourceFile DestFile  # 远程同步服务器文件，比scp更强大，不修改文件创建日期，可以不覆盖式传输，支持断点传输。-e后的引号内表示修改端口号，-avzut表示的内容，请自行使用rsync -h查看
+
+# 远程从某台服务器上拷贝文件。-r针对文件夹；-v动态显示信息；如果该服务器端口不是默认的22，使用-P修改
+scp -r -v -P 2345 username@server_IP:/folder/source /folder/target
+
+# 远程同步服务器文件，比scp更强大，不修改文件创建日期，可以不覆盖式传输，支持断点传输。
+# -e后的引号内表示修改端口号，-avzut表示的内容，请自行使用rsync -h查看。
+# 关于大量文件（文件小而多，传输极为耗时）的远传，需要自行写多线程传输的逻辑代码。
+rsync -avzut -e 'ssh -p 2345' username@hostname:SourceFile DestFile  
 ```
 
 * 文件大小与个数
