@@ -60,6 +60,7 @@ cat /proc/meminfo  # 查看内存详细信息
 
 * GPU相关操作
 ```
+lspci | grep -i vga  # 查看电脑上的显卡硬件信息
 nvidia-smi  # 查看GPU占用情况
 watch -n 3 nvidia-smi  # 每隔n秒显示刷新一次GPU详情
 cat /usr/local/cuda/version.txt  # 查看CUDA版本
